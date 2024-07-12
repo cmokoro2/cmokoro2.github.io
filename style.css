@@ -1,0 +1,118 @@
+:root {
+    --red: #AD0017; /* Darkened #f00021 to be AAA contrast compliant with the offwhite #fafafa */
+    --green: #006115; /* Darkened #00f032 for AAA contrast */
+    --blue: #0026F0;
+    --offwhite: #fafafa;
+    --lighterblack: #111111;
+}
+
+body {
+    margin: 0 0;
+    text-align: center;
+    background-color: var(--offwhite);;
+    color: var(--lighterblack);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    background-color: var(--red);
+    color: var(--offwhite);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 8px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+main {
+    position: relative;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+}
+
+p {
+    padding: 0 40px;
+}
+
+section:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+footer {
+    position: relative;
+    padding: 12px 0;
+    width: 100%;
+    background-color: var(--red);
+}
+
+#quote {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    color: var(--offwhite);
+    text-shadow: 2px 2px var(--lighterblack);
+}
+
+#quote q {
+    font-size: 36px;
+}
+
+#quote p {
+    font-size: 24px;
+}
+
+.quoteblock {
+    position: relative;
+    padding: 60px 10px 0px 10px;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+#gallery img {
+    max-width: 30%;
+    padding: 10px 0;
+}
+
+#backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px), (orientation: portrait) {
+    #gallery img {
+        max-width: 90%;
+    }
+}

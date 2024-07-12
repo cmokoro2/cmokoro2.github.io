@@ -3,6 +3,7 @@
     --green: #006115; /* Darkened #00f032 for AAA contrast */
     --blue: #0026F0;
     --offwhite: #fafafa;
+    --lightgray: #eaeaea;
     --lighterblack: #111111;
 }
 
@@ -15,13 +16,18 @@ body {
 }
 
 header {
-    position: relative;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
     top: 0;
     margin: 0;
     padding: 10px 0;
     width: 100%;
-    background-color: var(--red);
+    background-color: var(--green);
     color: var(--offwhite);
+    z-index: 1;
 }
 
 h1, h2, h3, h4 {
@@ -30,15 +36,25 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 32px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 28px;
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 20px;
+}
+
+nav {
+    padding: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+nav a {
+    padding: 0 20px;
 }
 
 main {
@@ -56,14 +72,54 @@ p {
 }
 
 section:nth-child(even) {
-    background-color: #eaeaea;
+    background-color: var(--lightgray);
 }
 
 footer {
     position: relative;
     padding: 12px 0;
     width: 100%;
-    background-color: var(--red);
+    background-color: var(--green);
+    color: var(--offwhite);
+}
+
+a {
+    color: var(--lighterblack);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--lighterblack);
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--offwhite);
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: var(--offwhite);
+    text-decoration: none;
+}
+
+#mission {
+    display: flex;
+}
+
+.missionblurb {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px;
+}
+
+#mission p {
+    text-align: left;
+}
+
+#mission img {
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 48px;
 }
 
 #quote {
@@ -73,32 +129,36 @@ footer {
     position: relative;
     color: var(--offwhite);
     text-shadow: 2px 2px var(--lighterblack);
+    background-color: transparent;
 }
 
 #quote q {
-    font-size: 36px;
+    font-size: 20px;
 }
 
 #quote p {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .quoteblock {
     position: relative;
-    padding: 60px 10px 0px 10px;
+    padding: 100px 10px 40px 10px;
 }
 
-#gallery {
+#links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    height: 200px;
 }
 
-#gallery img {
-    max-width: 30%;
-    padding: 10px 0;
+#links a {
+    background-color: var(--green);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--offwhite);
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #backgroundVideo {
@@ -111,8 +171,45 @@ footer {
     height: 100%;
 }
 
+#doboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.dobox {
+    background-color: var(--offwhite);
+    width: 30%;
+    border-radius: 24px;
+    margin: 0 0 8px 0;
+}
+
+.dobox li {
+    text-align: left;
+}
+
+.dobox img {
+    max-width: 100%;
+    border-radius: 24px 24px 0 0;
+}
+
 @media (max-width: 768px), (orientation: portrait) {
-    #gallery img {
-        max-width: 90%;
+    header {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 20px;
+        padding: 0px;
+    }
+    #mission {
+        flex-direction: column;
+    }
+    #doboxes {
+        flex-direction: column;
+    }
+    .dobox {
+        width: 80%;
     }
 }

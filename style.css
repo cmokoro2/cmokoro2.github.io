@@ -1,8 +1,8 @@
 :root {
-    --red: #AD0017; /* Darkened #f00021 to be AAA contrast compliant with the offwhite #fafafa */
+    --red: #AD0017; /* Darkened #f00021 to be AAA contrast compliant with the darkerwhite #fafafa */
     --green: #006115; /* Darkened #00f032 for AAA contrast */
     --blue: #0026F0;
-    --offwhite: #fafafa;
+    --darkerwhite: #fafafa;
     --lightgray: #eaeaea;
     --lighterblack: #111111;
 }
@@ -10,9 +10,10 @@
 body {
     margin: 0 0;
     text-align: center;
-    background-color: var(--offwhite);;
+    background-color: var(--darkerwhite);;
     color: var(--lighterblack);
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
 }
 
 header {
@@ -20,14 +21,22 @@ header {
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     top: 0;
     margin: 0;
     padding: 10px 0;
     width: 100%;
     background-color: var(--green);
-    color: var(--offwhite);
+    color: var(--darkerwhite);
     z-index: 1;
+}
+
+header h1 {
+    padding: 8px 40px;
+}
+
+header nav {
+    padding: 8px 40px;
 }
 
 h1, h2, h3, h4 {
@@ -36,7 +45,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 h2 {
@@ -53,10 +62,6 @@ nav {
     margin-bottom: auto;
 }
 
-nav a {
-    padding: 0 20px;
-}
-
 main {
     position: relative;
 }
@@ -68,10 +73,10 @@ section {
 }
 
 p {
-    padding: 0 40px;
+    padding: 0 80px;
 }
 
-section:nth-child(even) {
+section:nth-child(odd) {
     background-color: var(--lightgray);
 }
 
@@ -80,7 +85,7 @@ footer {
     padding: 12px 0;
     width: 100%;
     background-color: var(--green);
-    color: var(--offwhite);
+    color: var(--darkerwhite);
 }
 
 a {
@@ -93,12 +98,13 @@ a:visited {
 }
 
 nav a {
-    color: var(--offwhite);
+    color: var(--darkerwhite);
     text-decoration: none;
+    padding: 0 20px;
 }
 
 nav a:visited {
-    color: var(--offwhite);
+    color: var(--darkerwhite);
     text-decoration: none;
 }
 
@@ -127,7 +133,7 @@ nav a:visited {
     flex-direction: column;
     flex: 1;
     position: relative;
-    color: var(--offwhite);
+    color: var(--darkerwhite);
     text-shadow: 2px 2px var(--lighterblack);
     background-color: transparent;
 }
@@ -143,22 +149,6 @@ nav a:visited {
 .quoteblock {
     position: relative;
     padding: 100px 10px 40px 10px;
-}
-
-#links {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
-    height: 200px;
-}
-
-#links a {
-    background-color: var(--green);
-    padding: 20px;
-    border-radius: 10px;
-    color: var(--offwhite);
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 #backgroundVideo {
@@ -180,19 +170,50 @@ nav a:visited {
 }
 
 .dobox {
-    background-color: var(--offwhite);
+    background-color: var(--darkerwhite);
     width: 30%;
     border-radius: 24px;
+    padding: 0 0 28px 0;
     margin: 0 0 8px 0;
 }
 
-.dobox li {
-    text-align: left;
+.dobox a {
+    position: relative;
+    background-color: var(--green);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--darkerwhite);
+}
+
+.dobox p {
+    padding: 0px 10px 20px;
 }
 
 .dobox img {
     max-width: 100%;
     border-radius: 24px 24px 0 0;
+}
+
+.mobileonly {
+    display: none;
+}
+
+#menubutton {
+    padding: 5px 20px;
+    background-color: var(--green);
+    border-style: solid;
+    border-color: var(--darkerwhite);
+    color: var(--darkerwhite);
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+li {
+    text-align: left;
+}
+
+ul {
+    padding: 0 80px;
 }
 
 @media (max-width: 768px), (orientation: portrait) {
@@ -211,5 +232,45 @@ nav a:visited {
     }
     .dobox {
         width: 80%;
+    }
+    .mobileclosed {
+        display: none;
+    }
+    .mobileonly {
+        display: block;
+    }
+}
+
+@media (min-width: 769px), (orientation: landscape) {
+
+    .dropdown {
+        margin: 0;
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        background-color: var(--darkerwhite);
+    }
+
+    .dropdown-content a {
+        padding: 4px 10px;
+        color: var(--lighterblack);
+        background-color: var(--darkerwhite);
+        border: 1px solid var(--lightgray);
+    }
+    .dropdown-content a:visited {
+        padding: 10px;
+        margin: 10px;
+        color: var(--lighterblack);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
     }
 }

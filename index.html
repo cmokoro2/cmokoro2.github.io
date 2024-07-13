@@ -13,16 +13,27 @@
 <body>
   <header>
     <h1>
-      AKEM
+      African Kids Education Matters
     </h1>
-    <nav>
-      <a href="">Home</a>
-      <a href="">About Us</a>
-      <a href="">Education</a>
-      <a href="">Music</a>
-      <a href="">Sports</a>
-      <a href="">Community Outreach</a>
-  </nav>
+    <nav class="mobileclosed" id="menunav">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="education.html">Education</a>
+      <a href="music.html">Music</a>
+      <a href="sports.html">Sports</a>
+      <a href="community.html">Community Outreach</a>
+      <span class="dropdown">
+        How to Help
+        <span class="dropdown-content">
+          <a href="">Donate</a>
+          <a href="">Sponsor</a>
+          <a href="">Learn More</a>
+        </span>
+      </span>
+    </nav>
+    <form class="mobileonly" id="menuform">
+      <button type="submit" id="menubutton">+</button>
+    </form>
   </header>
   <main>
     <section id="mission">
@@ -47,11 +58,6 @@
         <source src="videos/akemviolins.mp4" type="video/mp4">
       </video>
     </section>
-    <section id="links">
-      <a href="">Donate</a>
-      <a href="">Sponsor</a>
-      <a href="">Learn More</a>
-    </section>
     <section id="whatwedo">
       <h2> What we do</h2>
       <div id="doboxes">
@@ -61,24 +67,7 @@
           <p>
             Transforming and providing comprehensive support in education for African kids
           </p>
-          <h4>Challenges Faced by African Kids in Education</h4>
-          <ul>
-            <li>High Child Labor Rates: Over 20% of African children aged 6 to 17 are engaged in child labor, hindering their education and development.</li>
-            <li>Abject Poverty: Extreme poverty prevents many families from affording school fees, leading to numerous children being unable to attend school.</li>
-            <li>Inadequate Funding: Grassroots education systems lack sufficient funding, resulting in poor infrastructure, untrained staff, and insufficient educational resources.</li>
-            <li>High Numbers of Out-of-School Children: More than 42 million African children are not in school, with 60% unable to attend elementary school due to financial constraints.</li>
-          </ul>
-          <h4>Our Mission to Transform Education for African Kids</h4>
-          <ul>
-            <li>Providing Comprehensive Support: We offer educational support, musical skills, sports, and essential experiences to ensure holistic child development.</li>
-            <li>Creating a Conducive Learning Environment: We enhance infrastructure, provide learning materials, and ensure access to qualified educators to create supportive learning conditions.</li>
-            <li>Addressing Financial Barriers: We alleviate financial obstacles by offering scholarships, providing school supplies, and supporting families in need.</li>
-            <li>Fostering Sustainable Change: Our aim is to create lasting improvements in the education system, empowering children to break the cycle of poverty and reach their full potential.</li>
-            <li>Advocating for Policy Changes: We push for policies that prioritize education funding and address structural issues hindering educational access and quality.</li>
-          </ul>
-          <p>
-            By tackling these challenges, we strive to transform education for African children, ensuring every child can learn, grow, and succeed.
-          </p>
+          <a href="education.html"> Learn More </a>
         </div>
         <div class="dobox">
           <img src="images/IMG_3455.jpg" alt="Student being guided on the violin">
@@ -86,20 +75,7 @@
           <p>
             Our annual music competition and Christmas concerts allow the kids to fully develop and display their talents.
           </p>
-          <h4>Challenges of Music Education for African Kids:</h4>
-          <ul>
-            <li>Lack of Resources: Many schools in Africa, especially in rural areas, lack basic resources such as musical instruments, textbooks, and other teaching materials. This makes it difficult to provide a comprehensive music education.</li>
-            <li>Insufficient Funding: Music programs often receive less funding compared to other subjects, leading to inadequate facilities and poorly maintained equipment. This can discourage both students and teachers.</li>
-            <li>Limited Access to Qualified Teachers: There is a shortage of trained and qualified music educators in many parts of Africa. This shortage has resulted in a lack of quality instruction and a limited music curriculum.</li>
-            <li>Cultural Perceptions: In some communities, music education may not be highly valued, with greater emphasis placed on subjects perceived to have more direct economic benefits. This has led to low enrollment in music programs and insufficient support from parents and the community.</li>
-            <li>Infrastructure Issues: Poor infrastructure, such as lack of electricity and inadequate classroom space, has hindered the implementation of music education programs.</li>
-            <li>Economic Barriers: Many families cannot afford to buy musical instruments or pay for private music lessons, limiting children's opportunities to pursue music education in and outside of school.</li>
-          </ul>
-          <h4>How AKEM has helped in its Improvements:</h4>
-          <p>Our annual Christmas concerts and summer competitions/training provide a platform for children across Africa to showcase their talents. We support this initiative by supplying musical instruments, sheet music, and essential materials to schools and communities, ensuring children have the necessary resources to learn and practice music.</p>
-          <p>Additionally, we offer scholarships and financial aid to talented students from low-income families, helping them pursue their passion for music despite financial challenges.</p>
-          <p>Our foundation actively engages with communities to raise awareness about the value of music education. We organize events, concerts, and workshops to highlight its benefits and encourage support from parents and local leaders.</p>
-          <p>Furthermore, we have developed inclusive music programs that cater to children of all abilities and backgrounds, ensuring every child can learn and enjoy music.</p>
+          <a href="music.html"> Learn More </a>
         </div>
         <div class="dobox">
           <img src="images/IMG_3464.jpg" alt="Group of children">
@@ -107,6 +83,7 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          <a href="community.html"> Learn More </a>
         </div>
       </div>
     </section>
@@ -119,5 +96,6 @@
       Non-profit
     </p>
   </footer>
+  <script src="js/menu.js"></script>
 </body>
 </html>

@@ -141,11 +141,14 @@ nav a:visited {
     position: relative;
     margin-top: auto;
     margin-bottom: auto;
+    margin-right: 20%;
     padding: 80px 120px;
+    width: 60%;
     text-align: left;
 }
 .missiontext {
-    width: 75%;
+    position: relative;
+    width: 80%;
 }
 
 .missiontext h2 {
@@ -154,7 +157,7 @@ nav a:visited {
 }
 
 .missiontext p {
-    margin-right: 40%;
+    margin-right: 20%;
     padding: 0 0 0 80px;
 }
 
@@ -162,11 +165,11 @@ nav a:visited {
     position: absolute;
     display: block;
     object-fit: cover;
-    bottom: 80px;
-    right: 100px;
+    bottom: 0;
+    right: -60%;
     z-index: 0;
-    max-height: 80%;
-    max-width: 40%;
+    max-height: 100%;
+    max-width: 80%;
     margin: 0;
 }
 
@@ -232,7 +235,7 @@ nav a:visited {
 }
 
 .dobox img {
-    max-width: 100%;
+    max-width: Calc(100% - 4px);
     margin: 20px 0;
     border: solid 2px black;
 }
@@ -279,9 +282,12 @@ q {
     }
 
     .missionblurb {
+        width: 80%;
         margin-top: auto;
         margin-bottom: auto;
-        padding: 80px 40px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px 0;
     }
 
     .missiontext {
@@ -309,7 +315,7 @@ q {
         margin-right: auto;
         bottom: 0;
         right: 0;
-        width: 80vw;
+        width: 80%;
     }
 
     p {
@@ -357,23 +363,26 @@ q {
     #missionimg::after {
         content: "";
         position: absolute;
-        width: 40%;
-        height: 80%;
-        bottom: 79px;
-        right: 99px;
+        width: 81%;
+        height: 101%;
+        bottom: -0.5%;
+        right: -60.5%;
         background: linear-gradient(to bottom, rgba(250, 250, 250, 0) 80%, var(--lightgray)),
         linear-gradient(to right, rgba(250, 250, 250, 0) 80%, var(--lightgray));
     }
 }
 
 @media (max-aspect-ratio: 1/1) {
+    #missionimg {
+        position: relative;
+    }
     #missionimg::after {
         content: "";
         position: absolute;
-        width: 81vw;
-        height: 61vw;
-        bottom: 79px;
-        left: 9.5vw;
+        width: 81%;
+        height: 101%;
+        bottom: -0.5%;
+        left: 9.5%;
         background: linear-gradient(to bottom, rgba(250, 250, 250, 0) 80%, var(--lightgray)),
         linear-gradient(to right, rgba(250, 250, 250, 0) 80%, var(--lightgray));
     }

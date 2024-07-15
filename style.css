@@ -43,10 +43,6 @@ header h1 {
     padding: 8px 40px;
 }
 
-header nav {
-    padding: 8px 40px;
-}
-
 h1, h2, h3, h4 {
     font-family: 'Times New Roman', Times, serif;
     padding: 8px;
@@ -71,7 +67,7 @@ h3 {
 }
 
 nav {
-    padding: 8px;
+    padding: 8px 40px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -242,6 +238,7 @@ nav a:visited {
 
 .mobileonly {
     display: none;
+    position: relative;
 }
 
 #menubutton {
@@ -249,9 +246,39 @@ nav a:visited {
     background-color: var(--green);
     border-style: solid;
     border-color: var(--darkerwhite);
-    color: var(--darkerwhite);
+    color: var(--green);
     font-size: 24px;
-    border-radius: 8px;
+    border-radius: 4px;
+}
+
+#hamburger1 {
+    position: absolute;
+    border: 1px solid var(--darkerwhite);
+    height: 0px;
+    width: 60%;
+    left: Calc(20% - 1px);
+    margin-right: auto;
+    top: 70%;
+}
+
+#hamburger2 {
+    position: absolute;
+    border: 1px solid var(--darkerwhite);
+    height: 0px;
+    width: 60%;
+    left: Calc(20% - 1px);
+    margin-right: auto;
+    top: 50%;
+}
+
+#hamburger3 {
+    position: absolute;
+    border: 1px solid var(--darkerwhite);
+    height: 0px;
+    width: 60%;
+    left: Calc(20% - 1px);
+    margin-right: auto;
+    top: 30%;
 }
 
 li {
@@ -266,19 +293,63 @@ q {
     font-style: italic;
 }
 
+.menuseperator {
+    display: none;
+}
+
+
 @media (max-width: 768px), (orientation: portrait) {
     header {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    h1 {
+    header h1 {
         font-size: 20px;
-        padding: 0px;
+        padding: 8px 0px;
     }
     .mobileclosed {
         display: none;
     }
     .mobileonly {
         display: block;
+        z-index: 3;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .mobileopen {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        width: calc(100% - 2px);
+        z-index: 1;
+        background-color: var(--darkerwhite);
+        border: solid 1px var(--lighterblack);
+    }
+
+    .mobileopen a {
+        color: var(--lighterblack);
+    }
+    .mobileopen a:visited {
+        color: var(--lighterblack);
+    }
+
+    .menuseperator {
+        display: block;
+        width: 80%;
+    }
+
+    .dropdown {
+        color: var(--crimson);
+        margin: 0 20px;
+    }
+    .dropdown-content {
+        color: var(--lighterblack);
+    }
+
+    nav {
+        padding: 8px 0;
     }
 
     .missionblurb {
@@ -320,6 +391,10 @@ q {
 
     p {
         padding: 0 40px;
+    }
+
+    h2 {
+        padding: 8px 20px;
     }
 }
 

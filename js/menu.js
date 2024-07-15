@@ -8,11 +8,9 @@ function openMenu(event) {
     if (menuClosed) {
         nav.setAttribute("class","mobileopen");
         menuClosed = false;
-        menuButton.innerHTML = "-";
     } else {
         nav.setAttribute("class","mobileclosed");
         menuClosed = true;
-        menuButton.innerHTML = "+";
     }
 }
 

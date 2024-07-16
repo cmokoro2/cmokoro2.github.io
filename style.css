@@ -95,7 +95,7 @@ footer {
     position: absolute;
     bottom: -306px;
     width: 100%;
-    background-color: var(--lighterblack);
+    background-color: var(--green);
     color: var(--darkerwhite);
 }
 
@@ -111,12 +111,20 @@ footer a:visited {
 }
 
 #footerupper {
-    background-color: var(--darkgray);
+    background-color: var(--darkerwhite);
     text-align: left;
+    color: var(--lighterblack);
+}
+
+#footerupper a {
+    color: var(--lighterblack);
+}
+#footerupper a:visited {
+    color: var(--lighterblack);
 }
 
 #footerlower {
-    background-color: var(--lighterblack);
+    background-color: var(--green);
     padding: 0;
     font-size: 14px;
     text-align: left;

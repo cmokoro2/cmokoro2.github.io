@@ -32,7 +32,7 @@ header {
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 0;
     margin: 0;
     padding: 10px 0;
@@ -44,6 +44,10 @@ header {
 
 header h1 {
     padding: 8px 40px;
+}
+
+.akemlogo {
+    max-width: 25%;
 }
 
 h1, h2, h3, h4 {
@@ -68,6 +72,9 @@ h3 {
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 8px 40px;
     margin-top: auto;
     margin-bottom: auto;
@@ -93,7 +100,7 @@ section:nth-child(odd) {
 
 footer {
     position: absolute;
-    bottom: -306px;
+    top: 100%;
     width: 100%;
     background-color: var(--green);
     color: var(--darkerwhite);
@@ -195,6 +202,7 @@ nav a:visited {
     text-shadow: 2px 2px var(--lighterblack);
     font-size: 3vw;
     line-height: 1.5em;
+    font-weight: bold;
 }
 
 .quoteblock p {
@@ -391,8 +399,10 @@ q {
 
 .socialmedias {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 #missionstatement {
@@ -421,10 +431,17 @@ q {
     margin-left: 80px;
 }
 
+.socialmedias img {
+    display: block;
+    width: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 768px), (orientation: portrait) {
     header {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     
     header h1 {
@@ -436,11 +453,17 @@ q {
         display: none;
     }
 
+    .akemlogo {
+        margin-left: 20px;
+        max-width: 30%;
+    }
+
     .mobileonly {
         display: block;
         z-index: 30;
         margin-top: auto;
         margin-bottom: auto;
+        margin-right: 20px;
     }
 
     .mobileopen {
@@ -503,12 +526,16 @@ q {
         font-size: 20px;
         padding: 10px;
     }
+
+    .quoteblock {
+        text-shadow: 1px 1px var(--lighterblack);
+    }
 }
 
 @media (min-width: 769px), (orientation: landscape) {
 
     .dropdown {
-        margin: 0;
+        margin: 0 20px;
         position: relative;
     }
 
